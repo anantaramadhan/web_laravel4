@@ -20,16 +20,16 @@ use Symfony\Component\Mailer\Transport\RoundRobinTransport;
 
 
 //acara3
-Route::get('foo',function(){
-    return 'Hello world';
-});
+// Route::get('foo',function(){
+//     return 'Hello world';
+// });
 
-Route::get('user/{id}', function($id){
-    return 'User'.$id;
-});
+// Route::get('user/{id}', function($id){
+//     return 'User'.$id;
+// });
 
-Route::get('post/{post}/comments/{comment}', function($postId , $commentId){
-    //
-});
-
-Route::get('/user', [UserController::class, 'index']);
+// Route::get('post/{post}/comments/{comment}', function($postId , $commentId){
+//     //
+// });
+Route::get('/user', 'ManagementUserController@index');
+Route::resource('/user', 'ManagementUserController');
