@@ -31,5 +31,17 @@ use Symfony\Component\Mailer\Transport\RoundRobinTransport;
 // Route::get('post/{post}/comments/{comment}', function($postId , $commentId){
 //     //
 // });
-Route::get('/user', 'ManagementUserController@index');
-Route::resource('/user', 'ManagementUserController');
+
+
+//acara 5
+// Route::get('/user', 'ManagementUserController@index');
+// Route::resource('/user', 'ManagementUserController');
+
+//acara 6 
+Route::get("/home", function(){
+    return view("home");
+});
+
+Route::get("/user", function(){
+    return view("user");
+});
